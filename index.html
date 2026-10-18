@@ -1,5 +1,258 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lareo</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#FFD84D;color:#1B1F1A;font:18px/1.5 Figtree,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center;padding:24px}svg{width:120px;height:120px;border-radius:28px}h1{font-size:2.6rem;margin:16px 0 4px}p{margin:4px 0}a{color:inherit}</style></head>
-<body><div><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" fill="#FFD84D"/><rect x="150" y="238" width="212" height="162" rx="40" fill="#1B1F1A"/><path d="M112 252 L256 130 L400 252" fill="none" stroke="#1B1F1A" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="322" r="38" fill="#FF6B4A"/></svg>
-<h1>Lareo</h1><p>Your home tells you what it needs.</p><p><a href="privacy/">Privacy policy</a> · <a href="mailto:jms@grazulex.be">Contact</a></p></div></body></html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lareo – l'entretien de la maison, avec la règle de votre région</title>
+<meta name="description" content="Lareo rappelle chaque entretien de la maison au bon moment et indique l'obligation légale de votre région, avec sa source. Sans compte, sans pub.">
+<link rel="canonical" href="https://lareo.immo/">
+<meta property="og:title" content="Lareo – l'entretien de la maison, avec la règle de votre région">
+<meta property="og:description" content="Chaudière, ramonage, détecteurs de fumée : les obligations de votre région, avec leurs sources.">
+<meta property="og:url" content="https://lareo.immo/">
+<meta name="theme-color" content="#FFD84D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%23FFD84D'/%3E%3Crect x='150' y='238' width='212' height='162' rx='40' fill='%231B1F1A'/%3E%3Cpath d='M112 252 L256 130 L400 252' fill='none' stroke='%231B1F1A' stroke-width='46' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='256' cy='322' r='38' fill='%23FF6B4A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#FFD84D;
+  --ink:#1B1F1A;
+  --coral:#FF6B4A;
+  --paper:#FFFFFF;
+  --muted:#5C6359;
+  --line:#E4E6DF;
+  --display:"Bricolage Grotesque",Figtree,system-ui,sans-serif;
+  --body:Figtree,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+/* Haut de page jaune */
+.top{background:var(--yellow);padding:1.5rem 0 4.5rem}
+.brand{display:flex;align-items:center;gap:.6rem;font:800 1.5rem/1 var(--display);text-decoration:none}
+.brand svg{width:2.4rem;height:2.4rem}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;margin-top:4rem}
+h1{font:800 clamp(2.8rem,7vw,5.4rem)/.95 var(--display);letter-spacing:-.02em;margin:0 0 1.5rem}
+.lead{font-size:1.25rem;line-height:1.5;max-width:30rem;margin:0}
+
+/* La règle qui change selon la région */
+.rule{background:var(--paper);border-radius:1.75rem;padding:1.75rem;box-shadow:0 1.25rem 0 -.6rem var(--ink)}
+.regions{display:flex;gap:.4rem;margin:0 0 1.5rem;padding:.3rem;background:#F1F2EC;border-radius:999px;border:0}
+.regions legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.regions button{flex:1;font:600 .95rem/1 var(--body);color:var(--ink);background:none;border:0;border-radius:999px;padding:.75rem .5rem;cursor:pointer}
+.regions button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.task{display:flex;gap:1rem;align-items:flex-start}
+.task-icon{flex:none;width:3rem;height:3rem;border-radius:.9rem;background:var(--yellow);display:grid;place-items:center}
+.task-icon svg{width:1.6rem;height:1.6rem}
+.task h2{font:600 1.15rem/1.3 var(--body);margin:.1rem 0 .2rem}
+.task .legal{display:inline-block;font:600 .8rem/1 var(--body);background:var(--ink);color:var(--paper);border-radius:.4rem;padding:.3rem .45rem;vertical-align:.1em;margin-left:.3rem}
+.interval{font:800 clamp(2rem,4vw,2.75rem)/1.05 var(--display);margin:1.25rem 0 .25rem}
+.interval-note{color:var(--muted);margin:0 0 1.25rem;font-size:.95rem}
+.source{border-top:1px solid var(--line);padding-top:1rem;font-size:.92rem;color:var(--muted);margin:0}
+.source a{color:var(--ink);font-weight:600}
+.next{display:flex;align-items:center;gap:.5rem;font-weight:600;margin:0 0 1rem}
+.dot{width:.75rem;height:.75rem;border-radius:50%;background:var(--coral);flex:none}
+
+/* Sections */
+section{padding:5rem 0}
+h3{font:800 clamp(1.9rem,4vw,2.75rem)/1.05 var(--display);letter-spacing:-.01em;margin:0 0 1rem;max-width:34rem}
+.intro{color:var(--muted);max-width:36rem;margin:0 0 2.5rem}
+
+/* Les rappels : une vraie chronologie */
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:.55rem;height:2px;background:var(--ink)}
+.timeline li{position:relative;padding:2rem 1rem 0 0}
+.timeline li::before{content:"";position:absolute;top:0;left:0;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.timeline li.due::before{background:var(--coral);border-color:var(--coral)}
+.timeline strong{display:block;font:800 1.35rem/1.2 var(--display);margin-bottom:.35rem}
+.timeline span{color:var(--muted);font-size:.95rem}
+
+/* Ce que Lareo ne fait pas */
+.plain{background:var(--ink);color:var(--paper)}
+.plain .intro{color:#B9C0B4}
+.nots{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin:0}
+.nots div{border-top:2px solid var(--yellow);padding-top:1rem}
+.nots dt{font:800 1.4rem/1.2 var(--display);margin-bottom:.4rem}
+.nots dd{margin:0;color:#D5DAD0}
+
+/* Pays et prix */
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.countries{list-style:none;margin:0;padding:0}
+.countries li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.countries li span{color:var(--muted);text-align:right}
+
+/* Disponibilité */
+.get{background:var(--yellow)}
+.stores{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.store{display:block;text-decoration:none;background:var(--ink);color:var(--paper);border-radius:1rem;padding:1rem 1.4rem;min-width:15rem}
+.store b{display:block;font:800 1.3rem/1.2 var(--display)}
+.store small{font-size:.9rem;color:#D5DAD0}
+.store.soon{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.store.soon small{color:var(--ink)}
+
+footer{padding:2.5rem 0;font-size:.95rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:1.25rem}
+
+@media (max-width:52rem){
+  .hero{grid-template-columns:1fr;margin-top:2.5rem;gap:2.5rem}
+  .timeline{grid-template-columns:1fr 1fr;row-gap:2.5rem}
+  .timeline::before{display:none}
+  .nots,.facts{grid-template-columns:1fr}
+  section{padding:3.5rem 0}
+}
+@media (prefers-reduced-motion:no-preference){
+  .interval{transition:opacity .2s}
+  .interval.swap{opacity:0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Lareo, accueil">
+      <svg viewBox="0 0 512 512" aria-hidden="true"><rect x="150" y="238" width="212" height="162" rx="40" fill="#1B1F1A"/><path d="M112 252 L256 130 L400 252" fill="none" stroke="#1B1F1A" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="322" r="38" fill="#FF6B4A"/></svg>
+      Lareo
+    </a>
+
+    <div class="hero">
+      <div>
+        <h1>Même chaudière. Trois règles.</h1>
+        <p class="lead">En Belgique, le contrôle d'une chaudière au gaz n'a pas la même fréquence en Wallonie, à Bruxelles et en Flandre. Lareo connaît la règle de votre région et vous rappelle chaque entretien au bon moment.</p>
+      </div>
+
+      <div class="rule">
+        <fieldset class="regions">
+          <legend>Choisissez une région</legend>
+          <button type="button" data-region="wal" aria-pressed="true">Wallonie</button>
+          <button type="button" data-region="bru" aria-pressed="false">Bruxelles</button>
+          <button type="button" data-region="vlg" aria-pressed="false">Flandre</button>
+        </fieldset>
+        <div class="task">
+          <div class="task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.5 1 2.5 2 3 0-3 .5-5.5 1-7.5z"/></svg></div>
+          <div>
+            <h2>Contrôle de la chaudière gaz <span class="legal">légal</span></h2>
+            <p class="interval" id="interval" aria-live="polite">Tous les 3 ans</p>
+            <p class="interval-note" id="note">Chaudière jusqu'à 100 kW. Au mazout : chaque année.</p>
+          </div>
+        </div>
+        <p class="next"><span class="dot" aria-hidden="true"></span><span>Lareo vous prévient 30 jours avant l'échéance.</span></p>
+        <p class="source" id="source">Source : <a href="https://energie.wallonie.be/home/performance-energetique-des-batiments/batiments-residentiels/renovation-walloreno/conseils-pratiques/se-chauffer-1/controle-periodique-et-diagnostic-approfondi-des-chaudieres.html">SPW Énergie</a>, vérifiée le 3 octobre 2026</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h3>Un rappel avant l'échéance, pas après.</h3>
+      <p class="intro">Vous ajoutez vos équipements une fois. Pour chaque entretien, Lareo vous prévient selon ce calendrier, jusqu'à ce que vous l'ayez noté comme fait.</p>
+      <ol class="timeline">
+        <li><strong>30 jours avant</strong><span>Le temps de trouver un technicien.</span></li>
+        <li><strong>7 jours avant</strong><span>Si le rendez-vous n'est pas encore pris.</span></li>
+        <li class="due"><strong>Le jour même</strong><span>L'échéance de la règle.</span></li>
+        <li><strong>Chaque semaine</strong><span>Tant que l'entretien est en retard.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="plain">
+    <div class="wrap">
+      <h3>Ce que Lareo ne vous demande pas.</h3>
+      <p class="intro">Vos équipements et vos attestations restent sur votre téléphone.</p>
+      <dl class="nots">
+        <div><dt>Pas de compte</dt><dd>Vous ouvrez l'app et vous ajoutez votre chaudière. Pas d'e-mail, pas de mot de passe.</dd></div>
+        <div><dt>Pas de pub</dt><dd>Ni bannière, ni pistage. L'app vit de Premium, pas de vos données.</dd></div>
+        <div><dt>Pas de règle inventée</dt><dd>Chaque obligation renvoie à sa source officielle et porte sa date de vérification.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap facts">
+      <div>
+        <h3>Cinq pays, chacun avec ses règles.</h3>
+        <p class="intro">L'app parle français, néerlandais, anglais, allemand, italien et espagnol, quel que soit le pays de votre logement.</p>
+      </div>
+      <ul class="countries">
+        <li>Belgique <span>Wallonie, Bruxelles, Flandre</span></li>
+        <li>France <span>règles nationales</span></li>
+        <li>Allemagne <span>règles nationales</span></li>
+        <li>Italie <span>règles nationales</span></li>
+        <li>Espagne <span>règles nationales</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="get" id="telecharger">
+    <div class="wrap">
+      <h3>Gratuit jusqu'à 5 équipements.</h3>
+      <p class="intro" style="color:var(--ink)">Assez pour une maison type : chaudière, cheminée, détecteurs, ventilation. Premium ajoute les équipements illimités et le dossier d'entretien en PDF, à remettre à la vente ou à la location.</p>
+      <div class="stores">
+        <span class="store soon"><b>Android</b><small>Sur Google Play le 3 novembre</small></span>
+        <a class="store" href="https://testflight.apple.com/join/b81FdNyS"><b>iPhone</b><small>Essayer la bêta avec TestFlight</small></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Lareo, une app belge.</span>
+    <nav aria-label="Liens utiles">
+      <a href="privacy/">Confidentialité</a>
+      <a href="mailto:lareo@grazulex.be">lareo@grazulex.be</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var rules = {
+    wal: {
+      interval: "Tous les 3 ans",
+      note: "Chaudière jusqu'à 100 kW. Au mazout : chaque année.",
+      source: "SPW Énergie",
+      url: "https://energie.wallonie.be/home/performance-energetique-des-batiments/batiments-residentiels/renovation-walloreno/conseils-pratiques/se-chauffer-1/controle-periodique-et-diagnostic-approfondi-des-chaudieres.html"
+    },
+    bru: {
+      interval: "Tous les 2 ans",
+      note: "Chaudière jusqu'à 100 kW. Au mazout : chaque année.",
+      source: "Bruxelles Environnement",
+      url: "https://environnement.brussels/entretien-chaudiere"
+    },
+    vlg: {
+      interval: "Tous les 2 ans",
+      note: "Au mazout : chaque année.",
+      source: "Departement Omgeving",
+      url: "https://omgeving.vlaanderen.be/overzicht-van-de-verplichtingen"
+    }
+  };
+  var buttons = document.querySelectorAll(".regions button");
+  var interval = document.getElementById("interval");
+  var note = document.getElementById("note");
+  var source = document.getElementById("source");
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var rule = rules[button.dataset.region];
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === button)); });
+      interval.classList.add("swap");
+      setTimeout(function () {
+        interval.textContent = rule.interval;
+        note.textContent = rule.note;
+        source.innerHTML = 'Source : <a href="' + rule.url + '">' + rule.source + '</a>, vérifiée le 3 octobre 2026';
+        interval.classList.remove("swap");
+      }, 150);
+    });
+  });
+})();
+</script>
+</body>
+</html>
