@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lareo – home maintenance, with the rule for your region</title>
+<meta name="description" content="Lareo reminds you of every home maintenance task at the right time and shows the legal obligation for your region, with its source. No account, no ads.">
+<link rel="canonical" href="https://lareo.immo/en/">
+<link rel="alternate" hreflang="fr" href="https://lareo.immo/">
+<link rel="alternate" hreflang="nl" href="https://lareo.immo/nl/">
+<link rel="alternate" hreflang="en" href="https://lareo.immo/en/">
+<link rel="alternate" hreflang="x-default" href="https://lareo.immo/">
+<meta property="og:title" content="Lareo – home maintenance, with the rule for your region">
+<meta property="og:description" content="Boiler, chimney, smoke detectors: the obligations for your region, with their sources.">
+<meta property="og:url" content="https://lareo.immo/en/">
+<meta name="theme-color" content="#FFD84D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%23FFD84D'/%3E%3Crect x='150' y='238' width='212' height='162' rx='40' fill='%231B1F1A'/%3E%3Cpath d='M112 252 L256 130 L400 252' fill='none' stroke='%231B1F1A' stroke-width='46' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='256' cy='322' r='38' fill='%23FF6B4A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="/en/" aria-label="Lareo, home">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><rect x="150" y="238" width="212" height="162" rx="40" fill="#1B1F1A"/><path d="M112 252 L256 130 L400 252" fill="none" stroke="#1B1F1A" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="322" r="38" fill="#FF6B4A"/></svg>
+        Lareo
+      </a>
+      <nav class="langs" aria-label="Language"><a href="/" hreflang="fr" lang="fr">FR</a><a href="/nl/" hreflang="nl" lang="nl">NL</a><a href="/en/" hreflang="en" lang="en" aria-current="page">EN</a></nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Same boiler. Three rules.</h1>
+        <p class="lead">In Belgium, a gas boiler is not inspected as often in Wallonia, Brussels and Flanders. Lareo knows the rule for your region and reminds you of every maintenance task at the right time.</p>
+      </div>
+
+      <div class="rule">
+        <fieldset class="regions">
+          <legend>Choose a region</legend>
+          <button type="button" data-region="wal" aria-pressed="true">Wallonia</button>
+          <button type="button" data-region="bru" aria-pressed="false">Brussels</button>
+          <button type="button" data-region="vlg" aria-pressed="false">Flanders</button>
+        </fieldset>
+        <div class="task">
+          <div class="task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.5 1 2.5 2 3 0-3 .5-5.5 1-7.5z"/></svg></div>
+          <div>
+            <h2>Gas boiler inspection <span class="legal">legal</span></h2>
+            <p class="interval" id="interval" aria-live="polite">Every 3 years</p>
+            <p class="interval-note" id="note">Boiler up to 100 kW. Oil-fired: every year.</p>
+          </div>
+        </div>
+        <p class="next"><span class="dot" aria-hidden="true"></span><span>Lareo reminds you 30 days before it is due.</span></p>
+        <p class="source" id="source">Source: <a href="https://energie.wallonie.be/home/performance-energetique-des-batiments/batiments-residentiels/renovation-walloreno/conseils-pratiques/se-chauffer-1/controle-periodique-et-diagnostic-approfondi-des-chaudieres.html">SPW Énergie</a>, checked on 3 October 2026</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h3>A reminder before it&#x27;s due, not after.</h3>
+      <p class="intro">You add your equipment once. For each task, Lareo reminds you on this schedule until you mark it as done.</p>
+      <ol class="timeline">
+        <li><strong>30 days before</strong><span>Time to find a technician.</span></li>
+        <li><strong>7 days before</strong><span>If the appointment isn&#x27;t booked yet.</span></li>
+        <li class="due"><strong>On the day</strong><span>The date set by the rule.</span></li>
+        <li><strong>Every week</strong><span>For as long as the task is overdue.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="plain">
+    <div class="wrap">
+      <h3>What Lareo doesn&#x27;t ask of you.</h3>
+      <p class="intro">Your equipment and certificates stay on your phone.</p>
+      <dl class="nots">
+        <div><dt>No account</dt><dd>Open the app and add your boiler. No email, no password.</dd></div>
+        <div><dt>No ads</dt><dd>No banners, no tracking. The app is funded by Premium, not by your data.</dd></div>
+        <div><dt>No made-up rules</dt><dd>Every obligation links to its official source and shows when it was last checked.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap facts">
+      <div>
+        <h3>Five countries, each with its own rules.</h3>
+        <p class="intro">The app speaks English, French, Dutch, German, Italian and Spanish, whatever country your home is in.</p>
+      </div>
+      <ul class="countries">
+        <li>Belgium <span>Wallonia, Brussels, Flanders</span></li>
+        <li>France <span>national rules</span></li>
+        <li>Germany <span>national rules</span></li>
+        <li>Italy <span>national rules</span></li>
+        <li>Spain <span>national rules</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="get">
+    <div class="wrap">
+      <h3>Free for up to 5 pieces of equipment.</h3>
+      <p class="intro">Enough for a typical home: boiler, chimney, smoke detectors, ventilation. Premium adds unlimited equipment and a PDF maintenance record to hand over when you sell or rent out.</p>
+      <div class="stores">
+        <span class="store soon"><b>Android</b><small>On Google Play from 3 November</small></span>
+        <a class="store" href="https://testflight.apple.com/join/b81FdNyS"><b>iPhone</b><small>Try the beta with TestFlight</small></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Lareo, a Belgian app.</span>
+    <nav aria-label="Useful links">
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:lareo@grazulex.be">lareo@grazulex.be</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/json" id="rules">{"sourceLabel": "Source:", "verified": ", checked on 3 October 2026", "regions": {"wal": {"interval": "Every 3 years", "note": "Boiler up to 100 kW. Oil-fired: every year.", "source": "SPW Énergie", "url": "https://energie.wallonie.be/home/performance-energetique-des-batiments/batiments-residentiels/renovation-walloreno/conseils-pratiques/se-chauffer-1/controle-periodique-et-diagnostic-approfondi-des-chaudieres.html"}, "bru": {"interval": "Every 2 years", "note": "Boiler up to 100 kW. Oil-fired: every year.", "source": "Bruxelles Environnement", "url": "https://environnement.brussels/entretien-chaudiere"}, "vlg": {"interval": "Every 2 years", "note": "Oil-fired: every year.", "source": "Departement Omgeving", "url": "https://omgeving.vlaanderen.be/overzicht-van-de-verplichtingen"}}}</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

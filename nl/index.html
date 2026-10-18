@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lareo – het onderhoud van uw woning, met de regel van uw regio</title>
+<meta name="description" content="Lareo herinnert u op het juiste moment aan elk onderhoud van uw woning en toont de wettelijke verplichting van uw regio, met de bron. Zonder account, zonder reclame.">
+<link rel="canonical" href="https://lareo.immo/nl/">
+<link rel="alternate" hreflang="fr" href="https://lareo.immo/">
+<link rel="alternate" hreflang="nl" href="https://lareo.immo/nl/">
+<link rel="alternate" hreflang="en" href="https://lareo.immo/en/">
+<link rel="alternate" hreflang="x-default" href="https://lareo.immo/">
+<meta property="og:title" content="Lareo – het onderhoud van uw woning, met de regel van uw regio">
+<meta property="og:description" content="Verwarmingsketel, schoorsteen, rookmelders: de verplichtingen van uw regio, met bronnen.">
+<meta property="og:url" content="https://lareo.immo/nl/">
+<meta name="theme-color" content="#FFD84D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%23FFD84D'/%3E%3Crect x='150' y='238' width='212' height='162' rx='40' fill='%231B1F1A'/%3E%3Cpath d='M112 252 L256 130 L400 252' fill='none' stroke='%231B1F1A' stroke-width='46' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='256' cy='322' r='38' fill='%23FF6B4A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="/nl/" aria-label="Lareo, startpagina">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><rect x="150" y="238" width="212" height="162" rx="40" fill="#1B1F1A"/><path d="M112 252 L256 130 L400 252" fill="none" stroke="#1B1F1A" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="322" r="38" fill="#FF6B4A"/></svg>
+        Lareo
+      </a>
+      <nav class="langs" aria-label="Taal"><a href="/" hreflang="fr" lang="fr">FR</a><a href="/nl/" hreflang="nl" lang="nl" aria-current="page">NL</a><a href="/en/" hreflang="en" lang="en">EN</a></nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Dezelfde ketel. Drie regels.</h1>
+        <p class="lead">In België moet een gasketel niet even vaak gekeurd worden in Vlaanderen, Brussel en Wallonië. Lareo kent de regel van uw regio en herinnert u op het juiste moment aan elk onderhoud.</p>
+      </div>
+
+      <div class="rule">
+        <fieldset class="regions">
+          <legend>Kies een regio</legend>
+          <button type="button" data-region="vlg" aria-pressed="true">Vlaanderen</button>
+          <button type="button" data-region="bru" aria-pressed="false">Brussel</button>
+          <button type="button" data-region="wal" aria-pressed="false">Wallonië</button>
+        </fieldset>
+        <div class="task">
+          <div class="task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.5 1 2.5 2 3 0-3 .5-5.5 1-7.5z"/></svg></div>
+          <div>
+            <h2>Keuring van de gasketel <span class="legal">wettelijk</span></h2>
+            <p class="interval" id="interval" aria-live="polite">Om de 2 jaar</p>
+            <p class="interval-note" id="note">Op stookolie: elk jaar.</p>
+          </div>
+        </div>
+        <p class="next"><span class="dot" aria-hidden="true"></span><span>Lareo verwittigt u 30 dagen voor de vervaldag.</span></p>
+        <p class="source" id="source">Bron: <a href="https://omgeving.vlaanderen.be/overzicht-van-de-verplichtingen">Departement Omgeving</a>, gecontroleerd op 3 oktober 2026</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h3>Een herinnering voor de vervaldag, niet erna.</h3>
+      <p class="intro">U voert uw toestellen één keer in. Voor elk onderhoud verwittigt Lareo u volgens dit schema, tot u het als uitgevoerd hebt aangeduid.</p>
+      <ol class="timeline">
+        <li><strong>30 dagen ervoor</strong><span>Tijd om een technicus te vinden.</span></li>
+        <li><strong>7 dagen ervoor</strong><span>Als de afspraak nog niet gemaakt is.</span></li>
+        <li class="due"><strong>Op de dag zelf</strong><span>De vervaldag van de regel.</span></li>
+        <li><strong>Elke week</strong><span>Zolang het onderhoud te laat is.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="plain">
+    <div class="wrap">
+      <h3>Wat Lareo u niet vraagt.</h3>
+      <p class="intro">Uw toestellen en attesten blijven op uw telefoon.</p>
+      <dl class="nots">
+        <div><dt>Geen account</dt><dd>U opent de app en voegt uw ketel toe. Geen e-mail, geen wachtwoord.</dd></div>
+        <div><dt>Geen reclame</dt><dd>Geen banners, geen tracking. De app leeft van Premium, niet van uw gegevens.</dd></div>
+        <div><dt>Geen verzonnen regels</dt><dd>Elke verplichting verwijst naar haar officiële bron en draagt haar controledatum.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap facts">
+      <div>
+        <h3>Vijf landen, elk met hun eigen regels.</h3>
+        <p class="intro">De app spreekt Nederlands, Frans, Engels, Duits, Italiaans en Spaans, ongeacht het land van uw woning.</p>
+      </div>
+      <ul class="countries">
+        <li>België <span>Vlaanderen, Brussel, Wallonië</span></li>
+        <li>Frankrijk <span>nationale regels</span></li>
+        <li>Duitsland <span>nationale regels</span></li>
+        <li>Italië <span>nationale regels</span></li>
+        <li>Spanje <span>nationale regels</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="get">
+    <div class="wrap">
+      <h3>Gratis tot 5 toestellen.</h3>
+      <p class="intro">Genoeg voor een gewone woning: ketel, schoorsteen, rookmelders, ventilatie. Premium voegt onbeperkt toestellen toe en het onderhoudsdossier in pdf, om mee te geven bij verkoop of verhuur.</p>
+      <div class="stores">
+        <span class="store soon"><b>Android</b><small>Op Google Play vanaf 3 november</small></span>
+        <a class="store" href="https://testflight.apple.com/join/b81FdNyS"><b>iPhone</b><small>Test de bèta met TestFlight</small></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Lareo, een Belgische app.</span>
+    <nav aria-label="Nuttige links">
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:lareo@grazulex.be">lareo@grazulex.be</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/json" id="rules">{"sourceLabel": "Bron:", "verified": ", gecontroleerd op 3 oktober 2026", "regions": {"wal": {"interval": "Om de 3 jaar", "note": "Ketel tot 100 kW. Op stookolie: elk jaar.", "source": "SPW Énergie", "url": "https://energie.wallonie.be/home/performance-energetique-des-batiments/batiments-residentiels/renovation-walloreno/conseils-pratiques/se-chauffer-1/controle-periodique-et-diagnostic-approfondi-des-chaudieres.html"}, "bru": {"interval": "Om de 2 jaar", "note": "Ketel tot 100 kW. Op stookolie: elk jaar.", "source": "Bruxelles Environnement", "url": "https://environnement.brussels/entretien-chaudiere"}, "vlg": {"interval": "Om de 2 jaar", "note": "Op stookolie: elk jaar.", "source": "Departement Omgeving", "url": "https://omgeving.vlaanderen.be/overzicht-van-de-verplichtingen"}}}</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
