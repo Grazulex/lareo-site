@@ -2,7 +2,7 @@
 // en Suisse (bandeau pour accepter), accordé ailleurs (bandeau pour refuser). Publicité toujours refusée.
 // Mesure le site lareo.immo seulement : l'application n'en contient aucune.
 (function () {
-  var ID = 'G-LAREO_TODO';
+  var ID = 'G-8EL7LER98F';
   var KEY = 'cookie_consent';
   function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function write(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
